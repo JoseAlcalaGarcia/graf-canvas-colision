@@ -7,27 +7,27 @@ const canvasHeight = container.offsetHeight * 13;  // Aumentamos la altura del c
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
-document.body.style.cursor = "url('/assets/img/imgs/punteria.png'), auto"; // Ruta de la imagen del puntero
+document.body.style.cursor = "url('assets/img/imgs/punteria.png'), auto"; // Ruta de la imagen del puntero
 
 let clickedImagesCount = 0;
 document.body.insertAdjacentHTML("beforeend", "<div id='counter' style='color: white; font-size: 20px; position: absolute; top: 140px; left: 200px;'>Imágenes clickeadas: 0</div>");
 
-let audio = new Audio("/assets/img/sounds/nightgoth.mp3"); 
+let audio = new Audio("assets/img/sounds/nightgoth.mp3"); 
 audio.loop = true;
 audio.play();
 
-let explosionSound = new Audio("/assets/img/sounds/batsound.mp3");
+let explosionSound = new Audio("assets/img/sounds/batsound.mp3");
 document.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
     }
 });
 
-const backgroundImageSrc = "/assets/img/imgs/darck.gif"; // Ruta del GIF de fondo
+const backgroundImageSrc = "assets/img/imgs/darck.gif"; // Ruta del GIF de fondo
 const backgroundImage = new Image();
 backgroundImage.src = backgroundImageSrc;
 
-const imageSrc = "/assets/img/imgs/bat.png"; // Reemplaza con la ruta de tu imagen
+const imageSrc = "assets/img/imgs/bat.png"; // Reemplaza con la ruta de tu imagen
 const image = new Image();
 image.src = imageSrc;
 
